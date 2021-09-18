@@ -19,13 +19,13 @@ func main() {
 	window := app.NewWindow("CPS")
 
 	cpsLabel := canvas.NewText("0.0 CPS", color.White)
-	cpsLabel.TextSize = 18
+	cpsLabel.TextSize = 24
 	cpsLabel.Move(fyne.NewPos(4, 0))
 	clickButton := widget.NewButton("Click", buttonClick)
-	clickButton.Move(fyne.NewPos(4, 34))
-	clickButton.Resize(fyne.Size{Width: 94, Height: 28})
+	clickButton.Move(fyne.NewPos(4, 42))
+	clickButton.Resize(fyne.Size{Width: 184, Height: 40})
 
-	window.Resize(fyne.Size{Width: 110, Height: 72})
+	window.Resize(fyne.Size{Width: 200, Height: 94})
 	window.SetFixedSize(true)
 	window.SetContent(container.NewWithoutLayout(cpsLabel, clickButton))
 	go manageCPS(cpsLabel)
